@@ -1,7 +1,7 @@
 const express = require('express');
 const pool = require('./db');
 const app = express();
-const PORT = 5500;
+//const PORT = 5500;
 
 app.use(express.json());
 app.get('/', (req, res) => {
@@ -90,6 +90,6 @@ app.put('/users/:id', (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 5500, () => {
   console.log('server is running on PORT ' + PORT);
 });
