@@ -91,5 +91,5 @@ app.put('/users/:id', (req, res) => {
 });
 
 app.listen(process.env.PORT || 5500, () => {
-  console.log('server is running on PORT ' + PORT);
+  console.log('server is running on PORT ');
 });
