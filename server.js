@@ -5,11 +5,11 @@ const app = express();
 
 app.use(express.json());
 app.get('/', (req, res) => {
-  res.send('Hello Express');
   pool.query('SELECT * FROM users', (error, results) => {
     if (error) throw error;
     return res.status(200).json(results.rows);
   });
+  res.send('Hello Express');
 });
 
 //ユーザー情報を全て取得する
